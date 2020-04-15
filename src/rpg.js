@@ -13,3 +13,11 @@ export function pingPong(goal) {
   }
   return output;
 }
+
+export Class Character {
+  constructor (warrior, wizard, rogue) {
+    this.warrior = warrior;
+    this.wizard = wizard;
+    this.rogue = rogue;
+  }
+};
