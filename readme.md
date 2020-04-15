@@ -65,6 +65,9 @@ git clone {link to repository}
 | Once in town user is propmted with three choices | 'Buy', 'Sell', 'Adventure' | | 'Buy from merchant', 'Sell to merchant', 'Go back to adventuring' |
 | Program will return + 1 currency for each sold loot| 'Sell (loot)' | | '+1 Currency' |
 | Program will prompt user to choose from purchase menu | 'Attk Upgrade' 'Heal Upgrade" | | '+ 1 hit points' '+ 1 Healing' |
+| Program will charge $3 per item upgrade | 'Attk Upgrade' | | '-$3 from user currency' |
+| Program will describe final battle scene and boss details upon user entering final scene | 'Venture forth to Finale!' | | 'Final scene and boss description (Boss will have 2x Attk & Health)' |
+| Program will prompt an epilogue upon victory | 'Boss health = 0' | | 'Epilogue' |
 
 ---
 ## Known Bugs
