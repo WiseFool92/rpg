@@ -4,6 +4,12 @@ import { diceRoll } from './../src/rpg';
 
 import { winCondition } from './../src/rpg';
 
-tests('Generates random number between 1-6', () => {
-  expect(rpg.diceRoll)
-}
+test('Generates random number between 1-6', () => {
+  
+  expect(diceRoll).toBeGreaterThan(0);
+  expect(diceRoll).toBeLessThan(7);
+});
+
+// test(''), () => {
+//   expect(winCondition).
+// }
