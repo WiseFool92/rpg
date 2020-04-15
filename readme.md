@@ -56,7 +56,7 @@ git clone {link to repository}
 | The program will prompt monster to "Attack", "Block", "Heal" |  'Attk' 'Blk' 'Heal' | '-1' , 'negate effect' , '+1' |
 | The program will prompt win for user or monster after health = 0 | 'Attk' | 'Hit' -1 Health |
 | The program will prompt scene restart if user hits 0 health | 'You've been killed' | 'Scene restart' |
-| The program distributes loot to player upon battle victory | 'You've killed (monster name)' | | 'Received (loot) from (monster name)' |
+| The program distributes loot to player upon battle victory | 'You've killed (monster name)' | 'Received (loot) from (monster name)' |
 | The program will level up user health by 10% after monster/scene completion | 'Defeat Monster' | 'Level up health by 10% |  
 | After battle victory the program prompts user choice: | 'Go to town', 'Search Room', 'Continue' | 'Town', 'Search', 'Continue' |
 | After battle victory or scene change health is reset to full | 'battle victory', 'scene change' | 'Health reset to full' |
