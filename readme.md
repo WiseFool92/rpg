@@ -50,7 +50,7 @@ git clone {link to repository}
 | The program prompts the journey's backstory | 'Click Start' | 'Intro story populates' |
 | The program propmts the user to move forward through the story | 'Click venture forth' | 'Character moves to next prompt' |
 | The program will prompt user into battles upon entry of a new scene | 'Click venture forth' | 'Battle Ensues' |
-| The program describes the battle scene | 'Entered scene' | | 'Battle Location/Opponent description' |
+| The program describes the battle scene | 'Entered scene' | 'Battle Location/Opponent description' |
 | The program prompts a d6 roll for player and monster. Highest roll goes first & ties default to monster victory. | 'd6 roll' | 'highest number goes first, ties default to monster victory' |
 | The program will prompt user to "Attack", "Block", "Heal" |  'Attk' 'Blk' 'Heal' | '-1' , 'negate effect' , '+1' |
 | The program will prompt monster to "Attack", "Block", "Heal" |  'Attk' 'Blk' 'Heal' | '-1' , 'negate effect' , '+1' |
