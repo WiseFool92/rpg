@@ -11,12 +11,12 @@ export class Character {
 };
 
 // 6 sided dice roll number generator
-let diceRoll = function() {
+export let diceRoll = function() {
   return Math.floor(Math.random() *6) +1;
 }
 
 // Check for win condition
-let winCondition = function(player, opponent) {
+export let winCondition = function(player, opponent) {
   if (opponent.health <= 0) {
     return "Victory";
   } else if (player.health <= 0) {
