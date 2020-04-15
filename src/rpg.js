@@ -19,7 +19,11 @@ export class Game {
     return Math.floor(Math.random() * 6) +1;
   };
 
-  battleRoyal = function();
+  battleRoyal = function() {
+    this.player = player;
+    this.opponent = opponent;
+    if (player diceRoll)
+  };
 
 
   // Check for win condition
