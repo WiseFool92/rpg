@@ -19,6 +19,9 @@ export class Game {
     return Math.floor(Math.random() * 6) +1;
   };
 
+  battleRoyal = function();
+
+
   // Check for win condition
   winCondition = function(player, opponent) {
     if (opponent.health <= 0) {
