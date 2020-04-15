@@ -45,11 +45,26 @@ git clone {link to repository}
 #### My RPG
 |                          Behavior                          | Input  | Output  |
 | :--------------------------------------------------------: | :----: | :-----: |
-| The program accepts user name input identification | 'Name' | 'Creates character "Name"' |
-| The program  | '' | '' |
-| The program  | '' | '' |
-
-
+| The program propmts the user to input name identification | 'Name' | 'Creates character "Name"' |
+| The program prompts character selection | 'Selects from dropdown' | '"Warrior", "Wizard", "Rogue"' |
+| The program prompts the journey's backstory | 'Click Start' | 'Intro story populates' |
+| The program propmts the user to move forward through the story | 'Click venture forth' | | 'Character moves to next prompt' |
+| The program will prompt user into battles upon entry of a new scene | 'Click venture forth' | | 'Battle Ensues' |
+| The program describes the battle scene | 'Entered scene' | | 'Battle Location/Opponent description' |
+| The program prompts a d6 roll for player and monster. Highest roll goes first & ties default to monster victory. | 'd6 roll' | | 'highest number goes first, ties default to monster victory' |
+| The program will prompt user to "Attack", "Block", "Heal" |  'Attk' 'Blk' 'Heal' | '-1' , 'negate effect' , '+1' |
+| The program will prompt monster to "Attack", "Block", "Heal" |  'Attk' 'Blk' 'Heal' | '-1' , 'negate effect' , '+1' |
+| The program will prompt win for user or monster after health = 0 | 'Attk' | | 'Hit' -1 Health |
+| The program will prompt scene restart if user hits 0 health | 'You've been killed' | | 'Scene restart' |
+| The program distributes loot to player upon battle victory | 'You've killed (monster name)' | | 'Received (loot) from (monster name)'
+| After battle victory the program prompts user choice: | 'Go to town', 'Search Room', 'Continue' | 'Town', 'Search', 'Continue' |
+| After battle victory or scene change health is reset to full | 'battle victory', 'scene change' | | 'Health reset to full' |
+| If user chooses 'Continue' program propmts next scene | 'Continue' | | 'Next Scene' |
+| If user chooses 'Search Room' program will prompt d6 roll, | 'if roll = 1-3', 'if roll = 4-6'| | 'user fights duplicate monster', 'user gains two pieces of loot' |
+| If user chooses 'Go to town' program prompts town text | 'Go to town' | | 'Welcome to town, would you like to sell loot at the Merchant to buy goods?' |
+| Once in town user is propmted with three choices | 'Buy', 'Sell', 'Adventure' | | 'Buy from merchant', 'Sell to merchant', 'Go back to adventuring' |
+| Program will return + 1 currency for each sold loot| 'Sell (loot)' | | '+1 Currency' |
+| Program will prompt user to choose from purchase menu | 'Attk Upgrade' 'Heal Upgrade" | | '+ 1 hit points' '+ 1 Healing' |
 
 ---
 ## Known Bugs
