@@ -1,6 +1,6 @@
 export class Character {
   constructor (name, strength, health) {
-    this.name = userName;
+    this.name = name;
     this.strength = strength;
     this.intellect = intellect;
     this.dex = dex;
@@ -9,44 +9,55 @@ export class Character {
     this.maxItems = 5;
     this.level = 1;
     
-    const warrior = new Character ("", 4, 2, 3, 10);
-    const wizard = new Character ("", 2, 4, 3, 10);
-    const rogue = new Character ("", 3, 3, 4, 10);
   }
 };
+
 
 export class Monster extends Character {
-  monsterClassGenerator = function () {
-    return Math.floor(Math.random() * 3) +1;
-  }
-};
-
-
-export class Game {
-
-  // 6 sided dice roll number generator
-  diceRoll = function() {
-    //console.log("1 - diceRoll() works");
-    return Math.floor(Math.random() * 6) +1;
-  };
-
-  battleRoyal = function() {
-    this.player = player;
-    this.opponent = opponent;
-    if (player.diceRoll > opponent.diceRoll)
-      return opponent.health -= 1;
-      else 
-      return player.health -= 1;
+  // monsterClassGenerator = function () {
+    //   return Math.floor(Math.random() * 3) +1;
+    // }
   };
   
   
-
-  // Check for win condition
-  winCondition = function(player, opponent) {
-    if (opponent.health <= 0) {
-      return "Victory";
-    } else if (player.health <= 0) {
-      return "Epic Failure";
+  
+  
+  export class Game {
+    constructor(character, monster) {
+      this.player = character;
+      this.opponent = monster;
     }
-  };
-}
+    
+    // 6 sided dice roll number generator
+    diceRoll = function() {
+      //console.log("1 - diceRoll() works");
+      return Math.floor(Math.random() * 6) +1;
+    };
+    
+    battleRoyal = function() {
+      this.player = player;
+      this.opponent = opponent;
+      if (player.diceRoll > opponent.diceRoll) {
+        return opponent.health -= 1;
+      } else {
+        return player.health -= 1;
+      }
+    };
+    
+    // Check for win condition
+    winCondition = function(player, opponent) {
+      if (opponent.health <= 0) {
+        return "Victory";
+      } else if (player.health <= 0) {
+        return "Epic Failure";
+      }
+    };
+  }
+  
+  const craig = new Monster('Craig', 4, 11);
+  const pip = new Character('Pip', 10, 12);
+  const game = new Game(pip, craig);
+  
+  const warrior = new Character ("", 4, 2, 3, 10);
+  const wizard = new Character ("", 2, 4, 3, 10);
+  const rogue = new Character ("", 3, 3, 4, 10);
