@@ -18,16 +18,14 @@ export class Monster extends Character {
 };
   
   export class Game {
-    constructor(character, monster) {
+    constructor (character, monster) {
       this.player = character;
       this.opponent = monster;
     }
-    
     // 6 sided dice roll number generator
     diceRoll() {
       return Math.floor(Math.random() * 6) +1;
     };
-    
     battleRoyal() {
       let player = this.player;
       let opponent = this.opponent;
@@ -37,13 +35,12 @@ export class Monster extends Character {
         return player.health -= 1;
       }
     };
-    
     // Check for win condition
     winCondition(player, opponent) {
       if (opponent.health <= 0) {
-        return "Victory";
+        return "Victory!"
       } else if (player.health <= 0) {
-        return "Epic Failure";
+        return "Epic Failure!";
       }
     };
   };
