@@ -48,8 +48,9 @@ export class Monster extends Character {
     };
   };
   
-  const game = new Game(player, opponent);
+  const craig = new Monster('Craig', 4, 11);
+  const wizard = new Character('Pip', 2, 4, 3, 10);
+  const warrior = new Character ('Chad', 4, 2, 3, 10);
+  const rogue = new Character ('Beyonce', 3, 3, 4, 10);
+  const game = new Game(wizard, craig, warrior, rogue);
   
-  const warrior = new Character ("", 4, 2, 3, 10);
-  const wizard = new Character ("", 2, 4, 3, 10);
-  const rogue = new Character ("", 3, 3, 4, 10);
