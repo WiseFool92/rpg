@@ -48,7 +48,7 @@ export class Monster extends Character {
     };
   };
   
-  const craig = new Monster('Craig', 4, 11);
+  const craig = new Monster('Craig', 4, 3, 3, 8);
   const wizard = new Character('Pip', 2, 4, 3, 10);
   const warrior = new Character ('Chad', 4, 2, 3, 10);
   const rogue = new Character ('Beyonce', 3, 3, 4, 10);
