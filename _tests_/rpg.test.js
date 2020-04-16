@@ -10,6 +10,8 @@ import { Monster } from './../src/rpg';
 
 import { Game } from './../src/rpg';
 
+import { Loot } from './../src/rpg';
+
 test('Generates random number between 1-6', () => {
   expect(Game.diceRoll()).toBeGreaterThan(0);
   expect(Game.diceRoll()).toBeLessThan(7);
@@ -54,3 +56,20 @@ test('highest rolled number wins battle round & delivers negative health', () =>
   expect(player.health).toEqual(9)
   expect(opponent.health).toBe(10)
 });
+
+test('player will receive 1 loot', () => {
+  let opponent = new Monster("monster", 4, 3, 3, 0);
+  let player = new Character("warrior", 4, 2, 3, 10);
+  let game = new Game(player,opponent,loot)
+  expect(winCondition).toBe(1)
+});
+
+test('player will receive 1 loot', () => {
+  let opponent = new Monster("monster", 4, 3, 3, 0);
+  let player = new Character("warrior", 4, 2, 3, 10);
+  let loot = new Loot();
+  let game = new Game(player,opponent,loot)
+  expect(winCondition).toBe(1)
+});
+
+

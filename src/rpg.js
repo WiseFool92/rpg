@@ -35,15 +35,33 @@ export class Monster extends Character {
         return player.health -= 1;
       }
     };
+    // // Check for win condition
+    // winCondition(player, opponent) {
+    //   if (opponent.health <= 0) {
+    //     return "Victory!"
+    //   } else if (player.health <= 0) {
+    //     return "Epic Failure!";
+    //   }
+    // };
+  };
+
+  export class Loot {
+    constructor(character, monster, []) {
+    this.player = character;
+    this.opponent = monster;
+    this.loot = [];
+    }
+
     // Check for win condition
-    winCondition(player, opponent) {
+    winCondition(player, opponent, loot) {
       if (opponent.health <= 0) {
+        this.loot.push(1)
         return "Victory!"
       } else if (player.health <= 0) {
         return "Epic Failure!";
       }
     };
-  };
+  }
   
   const craig = new Monster('Craig', 4, 3, 3, 8);
   const wizard = new Character('Pip', 2, 4, 3, 10);
