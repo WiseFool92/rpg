@@ -65,11 +65,19 @@ test('player will receive 1 loot', () => {
 });
 
 test('player will receive 1 loot', () => {
+
+  // simulate the end of a fight and have the player win
   let opponent = new Monster("monster", 4, 3, 3, 0);
   let player = new Character("warrior", 4, 2, 3, 10);
-  let loot = new Loot();
-  let game = new Game(player,opponent,loot)
-  expect(winCondition).toBe(1)
+  
+  let game = new Game(player, opponent)
+  // the player gets loot
+  // game.winCondition({ name: 'gold nug', value: 150, curse: false})
+  game.winCondition('sword')
+  game.winCondition('gold')
+  game.winCondition('gem')
+
+  expect(game.player.loot).toEqual(['sword', 'gold', 'gem'])
 });
 
 

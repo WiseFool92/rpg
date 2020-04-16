@@ -1,5 +1,5 @@
 export class Character {
-  constructor (name, strength, intellect, dex, health) {
+  constructor (name, strength, intellect, dex, health, loot) {
     this.name = name;
     this.strength = strength;
     this.intellect = intellect;
@@ -8,6 +8,7 @@ export class Character {
     this.items = [];
     this.maxItems = 5;
     this.level = 1;
+    this.loot = loot || [];
   }
 };
 
@@ -34,34 +35,17 @@ export class Monster extends Character {
       } else {
         return player.health -= 1;
       }
-    };
-    // // Check for win condition
-    // winCondition(player, opponent) {
-    //   if (opponent.health <= 0) {
-    //     return "Victory!"
-    //   } else if (player.health <= 0) {
-    //     return "Epic Failure!";
-    //   }
-    // };
-  };
-
-  export class Loot {
-    constructor(character, monster, []) {
-    this.player = character;
-    this.opponent = monster;
-    this.loot = [];
     }
-
-    // Check for win condition
-    winCondition(player, opponent, loot) {
-      if (opponent.health <= 0) {
-        this.loot.push(1)
-        return "Victory!"
-      } else if (player.health <= 0) {
-        return "Epic Failure!";
-      }
+      // Check for win condition
+      winCondition(loot) {
+        if (this.opponent.health <= 0) {
+          this.player.loot.push(loot)
+          return "Victory!"
+        } else if (this.player.health <= 0) {
+          return "Epic Failure!";
+        }
+      };
     };
-  }
   
   const craig = new Monster('Craig', 4, 3, 3, 8);
   const wizard = new Character('Pip', 2, 4, 3, 10);
