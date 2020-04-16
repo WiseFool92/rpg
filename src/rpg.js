@@ -24,12 +24,14 @@ export class Monster extends Character {
     }
     
     // 6 sided dice roll number generator
-    diceRoll = function() {
+    diceRoll() {
       return Math.floor(Math.random() * 6) +1;
     };
     
-    battleRoyal = function(player, opponent) {
-      if (player.diceRoll > opponent.diceRoll) {
+    battleRoyal() {
+      let player = this.player;
+      let opponent = this.opponent;
+      if (player.diceRoll() > opponent.diceRoll()) {
         return opponent.health -= 1;
       } else {
         return player.health -= 1;
@@ -37,7 +39,7 @@ export class Monster extends Character {
     };
     
     // Check for win condition
-    winCondition = function(player, opponent) {
+    winCondition(player, opponent) {
       if (opponent.health <= 0) {
         return "Victory";
       } else if (player.health <= 0) {
@@ -46,9 +48,7 @@ export class Monster extends Character {
     };
   };
   
-  const craig = new Monster('Craig', 4, 11);
-  const pip = new Character('Pip', 10, 12);
-  const game = new Game(pip, craig);
+  const game = new Game(player, opponent);
   
   const warrior = new Character ("", 4, 2, 3, 10);
   const wizard = new Character ("", 2, 4, 3, 10);
