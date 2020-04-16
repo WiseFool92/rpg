@@ -1,5 +1,5 @@
 export class Character {
-  constructor (name, strength, health) {
+  constructor (name, strength, intellect, dex, health) {
     this.name = name;
     this.strength = strength;
     this.intellect = intellect;
@@ -8,19 +8,14 @@ export class Character {
     this.items = [];
     this.maxItems = 5;
     this.level = 1;
-    
   }
 };
 
-
 export class Monster extends Character {
   // monsterClassGenerator = function () {
-    //   return Math.floor(Math.random() * 3) +1;
-    // }
-  };
-  
-  
-  
+  //   return Math.floor(Math.random() * 3) +1;
+  // }
+};
   
   export class Game {
     constructor(character, monster) {
@@ -30,13 +25,10 @@ export class Monster extends Character {
     
     // 6 sided dice roll number generator
     diceRoll = function() {
-      //console.log("1 - diceRoll() works");
       return Math.floor(Math.random() * 6) +1;
     };
     
-    battleRoyal = function() {
-      this.player = player;
-      this.opponent = opponent;
+    battleRoyal = function(player, opponent) {
       if (player.diceRoll > opponent.diceRoll) {
         return opponent.health -= 1;
       } else {
@@ -52,7 +44,7 @@ export class Monster extends Character {
         return "Epic Failure";
       }
     };
-  }
+  };
   
   const craig = new Monster('Craig', 4, 11);
   const pip = new Character('Pip', 10, 12);
